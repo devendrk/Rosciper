@@ -102,7 +102,7 @@ Create a new branch by typing branch followed by whatever descriptive term you w
 
     git branch countdown_view_branch
 
-<span style="color: red"> Some green text IMPORTANT!!! </span>To work on your new branch (and not the master branch) you must check it out. So type:
+<span style="color: red"> IMPORTANT!!! </span>To work on your new branch (and not the master branch) you must check it out. So type:
 
 ```git
 git checkout countdown_view_branch
