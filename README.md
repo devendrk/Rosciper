@@ -207,3 +207,5 @@ That -u flag will set an upstream branch to track with your local branch. Don't 
 - Always `git pull` before starting to change the code next time to avoid conflict and get updated version of remote repo.
 
 ### Happy coding :)
+
+:facepunch: :v: :hand: :fu:
