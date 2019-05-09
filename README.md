@@ -1,6 +1,6 @@
 ### How can I work on and possibly contribute code to a team development project?
 
-- Use Git to make a local copy of the project on your computer.That will allow you to make small but significant changes to a project and share them with the team without breaking anything.
+Use Git to make a local copy of the project on your computer.That will allow you to make small but significant changes to a project and share them with the team without breaking anything.
 
 First, think about where you want to store the project on your computer.
 
@@ -10,19 +10,19 @@ I stored mine here:
 C:\Users\s1900123\rosciper
 ```
 
-- To create that folder or directory on your computer use the Windows Command Prompt.
+To create that folder or directory on your computer use the Windows Command Prompt.
 
-- To start Windows Command Prompt click the magnifying glass icon on the bottom left corner of your screen.
+To start Windows Command Prompt click the magnifying glass icon on the bottom left corner of your screen.
 
-- Type “command prompt” into the Windows search (click the magnifying glass icon on the bottom left corner of your screen).
+Type “command prompt” into the Windows search (click the magnifying glass icon on the bottom left corner of your screen).
 
-- As you type the search result will appear and click the Command Prompt icon highlighted in blue to open the app.My app always opens up in the H drive so the cursor prompt looks like this:
+As you type the search result will appear and click the Command Prompt icon highlighted in blue to open the app.My app always opens up in the H drive so the cursor prompt looks like this:
 
 ```git
     H:\>
 ```
 
-- Understand that, to work from the command prompt, you should be in the correct directory. The folder that you’re in at any given time is known as the present working directory or PWD.
+Understand that, to work from the command prompt, you should be in the correct directory. The folder that you’re in at any given time is known as the present working directory or PWD.
 
 To move to the C drive I type this:
 
