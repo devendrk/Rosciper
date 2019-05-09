@@ -40,7 +40,7 @@ Now type the following to move to the Users directory:
 
 Your cursor prompt will look like this:
 
-C:\Users>
+    C:\Users>
 
 Now type the following (using your own student ID number) to enter your user directory:
 
@@ -48,7 +48,7 @@ Now type the following (using your own student ID number) to enter your user dir
 
 Your cursor prompt will look like this:
 
-C:\Users\s1900123>
+    C:\Users\s1900123>
 
 If you want to see a list of the folders that are already in the directory, type the following:
 
@@ -78,11 +78,11 @@ Get a local copy of the project from Github by typing:
 
     remote: Enumerating objects: 34, done.
 
-remote: Counting objects: 100% (34/34), done.
-remote: Compressing objects: 100% (25/25), done.
-remote: Total 34 (delta 7), reused 33 (delta 6), pack-reused 0
-Unpacking objects: 100% (34/34), done.
-From https://github.com/devendrk/Rosciper
+    remote: Counting objects: 100% (34/34), done.
+    remote: Compressing objects: 100% (25/25), done.
+    remote: Total 34 (delta 7), reused 33 (delta 6), pack-reused 0
+    Unpacking objects: 100% (34/34), done.
+    From https://github.com/devendrk/Rosciper
 
 ```git
  branch HEAD -> FETCH_HEAD
