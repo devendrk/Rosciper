@@ -104,8 +104,55 @@ Create a new branch by typing branch followed by whatever descriptive term you w
 
 <span style="color: red"> IMPORTANT!!! </span>To work on your new branch (and not the master branch) you must check it out. So type:
 
-```git
-git checkout countdown_view_branch
-```
+    ```git
+    git checkout countdown_view_branch
+    ```
 
 Obviously you must use the same branch name you used to create the branch to check it out.
+
+## how to add commit and push after I make some changes ?
+
+- Check status
+  ```git
+      git status
+  ```
+  Now all files recently changed will appear in RED color.
+
+2. To stage
+
+   ```git
+   git add .
+
+   ```
+
+3. Check if file is added or not
+
+   ```git
+       git status
+   ```
+
+   Now all files recently ADDED will appear in GREEN color.
+
+4. To commit
+   ```git
+   git commit -m"type your commit message here"
+   ```
+5. Again Check status
+
+   ```git
+       git status
+   ```
+
+   There will be an message stating everything is upto date. if not repeate step 2 and 4 anc check status again.
+
+- To Push
+
+  ```git
+      git push origin <your branch name with out including  < > symbol >
+  ```
+
+## IMPORTANT !!!
+
+- Always `git pull` before starting to change the code next time to avoid conflict and get updated version of remote repo.
+
+### Happy coding :)
