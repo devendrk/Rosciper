@@ -7,7 +7,7 @@ Use Git to make a local copy of the repository on your computer. This will allow
 
 First, think about where you want to store the repository on your computer.
 
-For the rosciper project, you can store it here:
+You should your Rosciper project directory something like this (use your own student number!):
 
 ```git
     C:\Users\s1900123\rosciper
