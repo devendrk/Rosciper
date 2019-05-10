@@ -3,21 +3,21 @@
 
 Ask the creator of the team code repository to add you to the repository as a collaborator. 
 
-Use Git to make a local copy of the repositroy on your computer. That will allow you to make small but significant changes and share them with the team without breaking anything. 
+Use Git to make a local copy of the repository on your computer. This will allow you to make small but significant changes and share them with the team without breaking anything. 
 
 First, think about where you want to store the repository on your computer.
 
-For the rosciper project, you can I store it here:
+For the rosciper project, you can store it here:
 
 ```git
-C:\Users\s1900123\rosciper
+    C:\Users\s1900123\rosciper
 ```
 
 To create that folder or directory on your computer use the Windows Command Prompt.
 
 To start Windows Command Prompt click the magnifying glass icon on the bottom left corner of your screen.
 
-Type “command prompt” into the Windows search (click the magnifying glass icon on the bottom left corner of your screen).
+Type `command prompt` into the Windows search (click the magnifying glass icon on the bottom left corner of your screen).
 
 As you begin to type the search result will appear above.  Click the Command Prompt icon highlighted in blue to open the app. 
 
@@ -71,11 +71,13 @@ If you want to see a list of the folders that are already in the directory, type
     dir
 ```
 
-To create a local Git folder for the Rosciper project type:
+To create a local clone of the Rosciper project repository type:
 
 ```git
-    git init rosciper
+    git clone https://github.com/devendrk/Rosciper.git
 ```
+
+This creates a local folder for the project, adds a hidden git folder to that folder and pulls the repository code to your local computer. 
 
 To confirm that you created the folder properly, check the current directory again by typing:
 
@@ -97,25 +99,9 @@ You're cursor will look like this:
     C:\Users\s1900529\rosciper>
 ```
 
-You might not be able to see it, and you don’t need to see it but there is a hidden .git folder in the rosciper directory. This folder contains all the git magic that makes all this work. 
+You might not be able to see it, and you don’t necessarily need to see it but there *is* a hidden .git folder in the rosciper directory. This folder contains the git magic that makes everything work. 
 
-Get a local copy of the project from Github by typing:
 
-```git
-    Git pull https://github.com/devendrk/Rosciper
-```
-
-You’ll see something like this in your terminal window:
-
-```git
-    remote: Enumerating objects: 34, done.
-
-    remote: Counting objects: 100% (34/34), done.
-    remote: Compressing objects: 100% (25/25), done.
-    remote: Total 34 (delta 7), reused 33 (delta 6), pack-reused 0
-    Unpacking objects: 100% (34/34), done.
-    From https://github.com/devendrk/Rosciper
-    branch HEAD -> FETCH_HEAD
 ```
 
 Since we created the directory with git init, there is no default remote, no origin. You need to set it up by yourself. Type:
@@ -124,7 +110,7 @@ Since we created the directory with git init, there is no default remote, no ori
     git remote add origin https://github.com/devendrk/Rosciper
 ```
 
-Type the following to check that you have set the remote to origin:
+Type the following to see that the remote has automatically been set to origin:
 
 ```git
     git remote
@@ -189,12 +175,12 @@ To see what files and folders are available to work on type:
     dir
 ```
 
-Type the name of the file you want to work on. I want to update the README.md so I simply type the following:
+Type the name of the file you want to work on. It can be a completely new file. ITo update the README.md file type:
 
 ```git
     README.md
 ```
-That file automatically launches in my Visual Studio Code.
+That file automatically launches in my default IDE which is Visual Studio Code .
 
 
 ## how to add commit and push after I make some changes ?
@@ -242,14 +228,16 @@ To share the changes you've made on your branch to the team you will have to pus
 The *first time* you push your branch type:
 
 ```git
-    git push -u origin <your branch name without including the < > tags>
+    git push --set-upstream origin <your branch name without including the < > tags>
 ```
 
-That -u flag will set an upstream branch to track with your local branch. Don't worry if you don't get this yet. After the first time you push a branch, you can push without the -u flag so type:
+The next time you want to push from this branch, type:
 
 ```git
     git push origin <your branch name without including the < > tags>
 ```
+
+You will now see your changes on the remote repository and you can make a pull request!
 
 **IMPORTANT !!!**
 
