@@ -89,6 +89,7 @@ You should now see the same list of folders as before, with the new rosciper fol
 
 Move into the rosciper folder by typing:
 
+
 ```git
     cd rosciper
 ```
@@ -96,20 +97,12 @@ Move into the rosciper folder by typing:
 You're cursor will look like this:
 
 ```git
-    C:\Users\s1900529\rosciper>
+    C:\Users\s1900123\rosciper>
 ```
 
 You might not be able to see it, and you don’t necessarily need to see it but there *is* a hidden .git folder in the rosciper directory. This folder contains the git magic that makes everything work. 
 
-
 ```
-
-Since we created the directory with git init, there is no default remote, no origin. You need to set it up by yourself. Type:
-
-```git
-    git remote add origin https://github.com/devendrk/Rosciper
-```
-
 Type the following to see that the remote has automatically been set to origin:
 
 ```git
@@ -137,7 +130,7 @@ Confirm that you are in the correct directory by typing:
 You'll see the following:
 
 ```git
-    C:\Users\s1900529\rosciper>
+    C:\Users\s1900123\rosciper>
 ```
 
 If you see something else, you are in the wrong directory and you will have to use the `cd` command sequence detailed above to move to the correct directory.
@@ -155,15 +148,15 @@ You’ll see the following:
 ```
 This means you are on the master branch. 
 
-**IMPORTANT!!!** Create a new branch to start working on the code and making any changes. You should work on one thing at a time, and have a dedicated branch for anything your working on. Small, discrete changes are a good thing.
+**IMPORTANT!!!** Create a new branch to start working on and making any changes to the repo. You should work on one task at a time, and have a dedicated branch for any task you're working on. Small, discrete changes are a good thing!
 
-Create a new branch by typing branch followed by whatever descriptive term you want to call your branch like game_logic_branch or countdown_view_branch. So:
+Create a new branch by typing branch followed by a term descriptive of the task you plan to work on like game_logic_branch or countdown_view_branch. So:
 
 ```git
     git branch <your branch name- don't include the < > tags!>
 ```
 
-**IMPORTANT!!!** To work on your new branch (and not the master branch) you must check out the new branch. Use the same branch name you used to create the branch to check it out. So type:
+**IMPORTANT!!!** To work on your new branch (and not the master branch) you must `check out` the new branch. Use the same branch name you used to create the branch to check it out. So type:
 
 ```git
     git checkout <your branch name- don't include the < > tags!>
@@ -175,44 +168,46 @@ To see what files and folders are available to work on type:
     dir
 ```
 
-Type the name of the file you want to work on. It can be a completely new file. ITo update the README.md file type:
+Type the name of the file you want to work on. If the file you need doesn't exist yet, type a name for the file, hit enter, and that file will be created. To update the existing README.md file type:
 
 ```git
     README.md
 ```
-That file automatically launches in my default IDE which is Visual Studio Code .
+That file automatically launches in my default IDE (Visual Studio Code).
+
+Start doing stuff!
 
 
 ## how to add commit and push after I make some changes ?
 
+You should frequently commit the changes you make. Committing your changes means saving them locally along with a message what you have changed. Do this often. You and other developers will be able to read through the commit messages to understand why the changes were made, undo major changes, try different solutions, etc. 
 
-To check your status to see any of the files that you have changed type:
+You must specify which changed files you want to include in a commit. To check which files you have changed type:
 
 ```git
     git status
 ```
-  Now all files recently changed will appear in RED color.
 
-To prepare all the changed files to be committed type:
+The names of the files you have changed while working on the branch will now appear in RED.
+
+To stage *all* the changed files to be committed type:
 
 ```git
    git add .
 ```
 
-To make sure the right files have been prepared type:
+To make sure the right files have been staged type:
 
 ```git
     git status
 ```
 
-All recently ADDED files will appear in GREEN color.
-
-Committing your changes means saving them along with details about what you have changed. Do this often. You and other developers will be able to read through the commit messages to understand why the changes were made. As you learn to use Git, you will also be able to use our commit history to undo major changes, try different solutions, etc. 
+The names of all the files you just staged will now appear in GREEN.
 
 To commit your changes type the following command with a descriptive commit message:
    
 ```git
-   git commit -m "type your commit message here"
+   git commit -m "<type your commit message here without including the < > tags>"
 ```
 
 To check your status again type:
@@ -221,9 +216,9 @@ To check your status again type:
     git status
 ```
 
-There will be an message stating everything is up to date. If not try `git add --all` to add all the files to staging.
+You will see a message stating everything is up to date. 
 
-To share the changes you've made on your branch to the team you will have to push your local repository to the remote repository on Github.
+To share the committed changes to the team you will `git push` the commits staged in your branch to the remote repository on Github.
 
 The *first time* you push your branch type:
 
@@ -231,7 +226,7 @@ The *first time* you push your branch type:
     git push --set-upstream origin <your branch name without including the < > tags>
 ```
 
-The next time you want to push from this branch, type:
+The next time you want to push the branch, type:
 
 ```git
     git push origin <your branch name without including the < > tags>
