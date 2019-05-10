@@ -228,14 +228,16 @@ To share the changes you've made on your branch to the team you will have to pus
 The *first time* you push your branch type:
 
 ```git
-    git push -u origin <your branch name without including the < > tags>
+    git push --set-upstream origin <your branch name without including the < > tags>
 ```
 
-That -u flag will set an upstream branch to track with your local branch. Don't worry if you don't get this yet. After the first time you push a branch, you can push without the -u flag so type:
+The next time you want to push from this branch, type:
 
 ```git
     git push origin <your branch name without including the < > tags>
 ```
+
+You will now see your changes on the remote repository and you can make a pull request!
 
 **IMPORTANT !!!**
 
