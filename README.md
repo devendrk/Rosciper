@@ -107,6 +107,24 @@ You’ll see somehting like this in your terminal window:
     branch HEAD -> FETCH_HEAD
 ```
 
+Since we created the directory with git init, there is no default remote, no origin. You need to set it up by yourself. Type:
+
+```git
+    git remote add origin https://github.com/devendrk/Rosciper
+```
+
+Type the following to check that you have set the remote to origin:
+
+```git
+    git remote
+```
+
+You should see the following response:
+
+```git
+    origin
+```
+
 Type the following to see that you are currently in the master branch:
 
 ```git
