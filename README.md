@@ -178,9 +178,11 @@ That file automatically launches in my default IDE (Visual Studio Code).
 Start doing stuff!
 
 
-## how to add commit and push after I make some changes ?
+## How do I stage, commit and push my changes?
 
-You should frequently commit the changes you make. Committing your changes means saving them locally along with a message what you have changed. Do this often. You and other developers will be able to read through the commit messages to understand why the changes were made, undo major changes, try different solutions, etc. 
+You should frequently commit your changes to a local staging area. Later you and other developers will be able to read through the commit messages to understand why changes were made, undo major changes, try different solutions, etc. 
+
+The staging area prepares a commit without having to include every change in the working directory. This lets you create highly focused commits, even if you’ve made a lot of local changes. Commit your changes with a message what you have changed. 
 
 You must specify which changed files you want to include in a commit. To check which files you have changed type:
 
@@ -189,6 +191,12 @@ You must specify which changed files you want to include in a commit. To check w
 ```
 
 The names of the files you have changed while working on the branch will now appear in RED.
+
+To stage one of the changed files type:
+
+```git
+    git add <type your file name and extension here without including the < > tags>
+```
 
 To stage *all* the changed files to be committed type:
 
@@ -202,7 +210,7 @@ To make sure the right files have been staged type:
     git status
 ```
 
-The names of all the files you just staged will now appear in GREEN.
+The names of all the file or files you just staged will now appear in GREEN.
 
 To commit your changes type the following command with a descriptive commit message:
    
