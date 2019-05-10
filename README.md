@@ -196,7 +196,7 @@ Start doing stuff!
 
 You should frequently commit your changes to a local staging area. Later you and other developers will be able to read through the commit messages to understand why changes were made, undo major changes, try different solutions, etc. 
 
-The staging area prepares a commit without having to include every change in the working directory. This lets you create highly focused commits, even if you’ve made a lot of local changes. Commit your changes with a message what you have changed. 
+The staging area prepares a commit without having to include every change in the working directory. This lets you create highly focused commits, even if you’ve made a lot of local changes. Commit your changes with a message describing what you have changed. 
 
 You must specify which changed files you want to include in a commit. To check which files you have changed type:
 
