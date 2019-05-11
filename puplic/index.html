@@ -8,7 +8,7 @@
     <title>Tensor </title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
         integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-    <script src="script.js"></script>
+
 </head>
 <style>
     h1 {
@@ -20,6 +20,35 @@
 
 
     }
+
+    #winner-board {
+        height: 90px;
+        width: 160px;
+        border: 1px solid #021a40;
+        padding: 1px;
+        border-radius: 15px;
+        margin-left: 10px;
+        margin-bottom: 20px;
+        align-content: center;
+        box-shadow: 2px 2px;
+    }
+    h2{
+        margin-left: 10px;
+        font-size: 150%;
+        border-radius: 25px;
+        background:darkblue;
+        padding: 1px; 
+        width: 160px;
+        height: 35px;
+        color: white;
+        box-shadow: 2px 2px;
+     
+}
+.btn{
+    margin-left:300px;
+}
+
+    
 
     .game-elements {
         height: 90px;
@@ -36,13 +65,13 @@
         justify-content: flex-start;
     }
 
-    #clock {
+   /* #clock {
         width: 100px;
         height: 100px;
         border-radius: 50%;
         background-color: lightgrey;
         margin-left: 20px;
-    }
+    }*/
 
     span {
         display: block;
@@ -59,16 +88,20 @@
 <body>
     <div class="container"></div>
     <h1>ROCK PAPER SCISSORS</h1>
-    <div id="clock">
-        <span id="seconds">3</span>
+   <br>
     </div>
+    <div><h2>Player 1 Score</h2></div>
+   
+    <div id="winner-board"></div>
     <div class="flex-container">
-        <div><img class="game-elements" src="rock.jpg" alt="Rock"></div>
-        <div><img class="game-elements" src="scissors.jpg" alt="Scissors"></div>
-        <div><img class="game-elements" src="paper.jpg" alt="Paper"></div>
+        <div><img class="game-elements" src="./images/rock.png" alt="Rock"></div>
+        <div><img class="game-elements" src="./images/scissors.png" alt="Scissors"></div>
+        <div><img class="game-elements" src="./images/paper.png" alt="Paper"></div>
+        <div> <button type="button" class="btn btn-outline-success"><b>Play</b></button></div>
     </div>
     </div>
-    <script src="./index.js"></script>
+
 </body>
+<script src="script.js"></script>
 
 </html>
