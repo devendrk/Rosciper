@@ -281,6 +281,15 @@ You will now see your changes on the remote repository and you can make a pull r
 
 Pull requests let you tell others about changes you've pushed to a branch in a repository on GitHub. Once a pull request is opened, you can discuss and review the potential changes with collaborators and add follow-up commits before your changes are merged into the base branch.
 
+Go to the following web address:
+
+```git
+    https://github.com/devendrk/Rosciper
+```
+
+Go to the `Branch:master` drop down menu and choose your branch. Enter your branch name at the `Switch branches\tags` drop down box or just click on your branch name. Now the drop down menu will say `Branch:<your branch name without including the < > tags>`. Click on the `New Pull Request` box and follow the instructions there. 
+    
+
 ### Happy coding :)
 
 :facepunch: :v: :hand: :fu:
