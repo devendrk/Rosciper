@@ -30,9 +30,9 @@ function trackAndCounterOpponentPreviousChoice(choice1){
 
     if (choice1 === "r"){
         rockCount += 1;
-    } else if (choice1 == "s"){
+    } else if (choice1 === "s"){
 	    paperCount += 1;
-    } else if (choice1 == "p"){
+    } else if (choice1 === "p"){
         scissorsCount += 1;
     }
 
@@ -45,3 +45,38 @@ function trackAndCounterOpponentPreviousChoice(choice1){
     }
 }
 
+// Function to track and and decay the value of older choices
+function decayPreviousChoiceValues(choice1){
+    if (!choiceRatings){
+        let rockRating = 0;
+        let scissorsRating = 0;
+        let paperRating = 0;
+        let choiceRatings = [rockRating, scissorsRating, paperRating];
+        console.log("The choice ratings are initialized: " + choiceRatings);
+    } else {
+        rockRating *= 0.95;
+        scissorsRating *= 0.95;
+        paperRating *= 0.95;
+        
+        if (choice1 === "r"){
+            paperRating += 0.1;
+            scissorsRating -= 0.1;
+        } else if (choice1 === "s"){
+            rockRating += 0.1;
+            paperRating -= 0.1;
+        } else if (choice1 === "p"){
+            scissorsRating += 0.1;
+            rockRating -= 0.1;
+        }
+
+        let randNum = ((random.random())*(math.exp(rockRating))+(math.exp(scissorsRating))+(math.exp(paperRating))); // TODO translate from Python!
+
+        if (randNum < (math.exp(rockRating))){
+            return "r";
+        } else if ((randNum < (math.exp(rockRating))) && (randNum < (math.exp(paperRating)))){
+            return "p";
+        } else {
+            return "s";
+        } 
+    }
+}       
