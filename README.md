@@ -1,27 +1,21 @@
-### How do I collaborate on a team development project?
+### How do I collaborate on the Rosciper project?
 
 
-Ask the creator of the team code repository to add you to the repository as a collaborator. 
+Ask Devendra to add you to the repository as a collaborator. 
 
-Use Git to make a local copy of the repositroy on your computer. That will allow you to make small but significant changes and share them with the team without breaking anything. 
+You will use Git to make a local copy of the repository on your computer. This will allow you to make small but significant changes and share them with the team without breaking anything. We're using the "Git Feature Branch Workflow." You can learn more about it [here](https://fi.atlassian.com/git/tutorials/comparing-workflows/feature-branch-workflow).
 
 First, think about where you want to store the repository on your computer.
 
-For the rosciper project, you can I store it here:
+You could call your Rosciper project directory something like this (use your own student number!):
 
 ```git
-C:\Users\s1900123\rosciper
+    C:\Users\s1900123\rosciper
 ```
 
-To create that folder or directory on your computer use the Windows Command Prompt.
+To create a project folder or directory on your computer use the Windows Command Prompt app. To start Windows Command Prompt click the magnifying glass icon on the bottom left corner of your screen. Type `command prompt` into the Windows search (click the magnifying glass icon on the bottom left corner of your screen). As you begin to type the search result will appear above.  Click the Command Prompt icon highlighted in blue to open the app. 
 
-To start Windows Command Prompt click the magnifying glass icon on the bottom left corner of your screen.
-
-Type “command prompt” into the Windows search (click the magnifying glass icon on the bottom left corner of your screen).
-
-As you begin to type the search result will appear above.  Click the Command Prompt icon highlighted in blue to open the app. 
-
-Understand that, to work from the command prompt, you should be in the correct directory. The folder that you’re in at any given time is known as the present working directory or PWD.
+Understand when using the command prompt you should pay attention to what folder or directory you're in. The cursor usually shows you the present working directory or PWD. 
 
 Your command prompt might open in the H drive so the cursor prompt may look like this:
 
@@ -71,11 +65,13 @@ If you want to see a list of the folders that are already in the directory, type
     dir
 ```
 
-To create a local Git folder for the Rosciper project type:
+To create a local clone of the Rosciper project repository type:
 
 ```git
-    git init rosciper
+    git clone https://github.com/devendrk/Rosciper.git
 ```
+
+This creates a local folder for the project, adds a hidden git folder to that folder and pulls the repository code to your local computer. 
 
 To confirm that you created the folder properly, check the current directory again by typing:
 
@@ -94,37 +90,12 @@ Move into the rosciper folder by typing:
 You're cursor will look like this:
 
 ```git
-    C:\Users\s1900529\rosciper>
+    C:\Users\s1900123\rosciper>
 ```
 
-You might not be able to see it, and you don’t need to see it but there is a hidden .git folder in the rosciper directory. This folder contains all the git magic that makes all this work. 
+You might not be able to see it, and you don’t necessarily need to see it but there *is* a hidden .git folder in the rosciper directory. This folder contains the git magic that makes everything work. 
 
-Get a local copy of the project from Github by typing:
-
-```git
-    Git pull https://github.com/devendrk/Rosciper
-```
-
-You’ll see something like this in your terminal window:
-
-```git
-    remote: Enumerating objects: 34, done.
-
-    remote: Counting objects: 100% (34/34), done.
-    remote: Compressing objects: 100% (25/25), done.
-    remote: Total 34 (delta 7), reused 33 (delta 6), pack-reused 0
-    Unpacking objects: 100% (34/34), done.
-    From https://github.com/devendrk/Rosciper
-    branch HEAD -> FETCH_HEAD
-```
-
-Since we created the directory with git init, there is no default remote, no origin. You need to set it up by yourself. Type:
-
-```git
-    git remote add origin https://github.com/devendrk/Rosciper
-```
-
-Type the following to check that you have set the remote to origin:
+Type the following to see that the remote has automatically been set to origin:
 
 ```git
     git remote
@@ -151,7 +122,7 @@ Confirm that you are in the correct directory by typing:
 You'll see the following:
 
 ```git
-    C:\Users\s1900529\rosciper>
+    C:\Users\s1900123\rosciper>
 ```
 
 If you see something else, you are in the wrong directory and you will have to use the `cd` command sequence detailed above to move to the correct directory.
@@ -169,18 +140,40 @@ You’ll see the following:
 ```
 This means you are on the master branch. 
 
-**IMPORTANT!!!** Create a new branch to start working on the code and making any changes. You should work on one thing at a time, and have a dedicated branch for anything your working on. Small, discrete changes are a good thing.
+To make sure you are working with the most up to date version of the remote master branch type:
 
-Create a new branch by typing branch followed by whatever descriptive term you want to call your branch like game_logic_branch or countdown_view_branch. So:
+```git
+    git pull origin master
+```
+
+You'll see something like this:
+
+```git
+    remote: Enumerating objects: 7, done.
+    remote: Counting objects: 100% (7/7), done.
+    remote: Compressing objects: 100% (4/4), done.
+    remote: Total 4 (delta 2), reused 0 (delta 0), pack-reused 0
+    Unpacking objects: 100% (4/4), done.
+    From https://github.com/devendrk/Rosciper
+    * branch            master     -> FETCH_HEAD
+    1050ca6..44e69b1  master     -> origin/master
+    Updating 1050ca6..44e69b1
+    Fast-forward
+```
+The updates on the remote master will also be listed. 
+
+**IMPORTANT!!!** Create a new feature branch to start working on and making any changes to the repo. You should work on one task at a time, and have a dedicated branch for any task you're working on. Small, discrete changes are a good thing!
+
+Create a new feature branch by typing `branch` followed by a branch name that describes the task you plan to work on such as game_logic_branch or countdown_view_branch:
 
 ```git
     git branch <your branch name- don't include the < > tags!>
 ```
 
-**IMPORTANT!!!** To work on your new branch (and not the master branch) you must check out the new branch. Use the same branch name you used to create the branch to check it out. So type:
+**IMPORTANT!!!** To work on your new branch (and not the master branch) you must `check out` the new branch. Use the same branch name you used to create the branch to check it out. So type:
 
 ```git
-    git checkout <your branch name- don't include the < > tags!>
+    git checkout <your feature branch name- don't include the < > tags!>
 ```
 
 To see what files and folders are available to work on type:
@@ -189,44 +182,54 @@ To see what files and folders are available to work on type:
     dir
 ```
 
-Type the name of the file you want to work on. I want to update the README.md so I simply type the following:
+Type the name of the file you want to work on. If the file you need doesn't exist yet, type a name for the file, hit enter, and that file will be created. To update the existing README.md file type:
 
 ```git
     README.md
 ```
-That file automatically launches in my Visual Studio Code.
+That file automatically launches in my default IDE (Visual Studio Code).
+
+Start doing stuff!
 
 
-## how to add commit and push after I make some changes ?
+## How do I stage, commit and push my changes?
 
+You should frequently commit your changes to a local staging area. Later you and other developers will be able to read through the commit messages to understand why changes were made, undo major changes, try different solutions, etc. 
 
-To check your status to see any of the files that you have changed type:
+The staging area prepares a commit without having to include every change in the working directory. This lets you create highly focused commits, even if you’ve made a lot of local changes. Commit your changes with a message describing what you have changed. 
+
+You must specify which changed files you want to include in a commit. To check which files you have changed type:
 
 ```git
     git status
 ```
-  Now all files recently changed will appear in RED color.
 
-To prepare all the changed files to be committed type:
+The names of the files you have changed while working on the branch will now appear in RED.
+
+To stage one of the changed files type:
+
+```git
+    git add <type your file name and extension here without including the < > tags>
+```
+
+To stage *all* the changed files to be committed type:
 
 ```git
    git add .
 ```
 
-To make sure the right files have been prepared type:
+To make sure the right files have been staged type:
 
 ```git
     git status
 ```
 
-All recently ADDED files will appear in GREEN color.
-
-Committing your changes means saving them along with details about what you have changed. Do this often. You and other developers will be able to read through the commit messages to understand why the changes were made. As you learn to use Git, you will also be able to use our commit history to undo major changes, try different solutions, etc. 
+The names of all the file or files you just staged will now appear in GREEN.
 
 To commit your changes type the following command with a descriptive commit message:
    
 ```git
-   git commit -m "type your commit message here"
+   git commit -m "<type your commit message here without including the < > tags>"
 ```
 
 To check your status again type:
@@ -235,25 +238,57 @@ To check your status again type:
     git status
 ```
 
-There will be an message stating everything is up to date. If not try `git add --all` to add all the files to staging.
+You will see a message stating everything on the branch is up to date. 
 
-To share the changes you've made on your branch to the team you will have to push your local repository to the remote repository on Github.
+**IMPORTANT !!!**
+
+It is good practice to keep your local repo master up to date with the remote repo master. To avoid merge conflicts, make sure you are working with the most up to date version of the remote master branch. Type: 
+
+```git
+    git checkout master
+```
+
+and type:
+
+```git
+    git pull origin master
+```
+
+The master branch will update. Then you can switch back to your new feature branch by typing:
+
+```git
+    git checkout <your feature branch name- don't include the < > tags!>
+```
+
+To share the committed changes to the team you will `git push` the commits staged in your feature branch to the remote repository on Github.
 
 The *first time* you push your branch type:
 
 ```git
-    git push -u origin <your branch name without including the < > tags>
+    git push --set-upstream origin <your branch name without including the < > tags>
 ```
 
-That -u flag will set an upstream branch to track with your local branch. Don't worry if you don't get this yet. After the first time you push a branch, you can push without the -u flag so type:
+The next time you want to push the branch, type:
 
 ```git
     git push origin <your branch name without including the < > tags>
 ```
 
-**IMPORTANT !!!**
+You will now see your changes on the remote repository and you can make a pull request!
 
-It is good practice to keep your local repo up to date with the remote repo. Before you `git push`, you can first `git pull` from the remote repository to your local master branch. This will help to avoid merge conflicts. We'll provide more detail about this later!
+
+## How do I get help with my code or get it merged into the project?
+
+Pull requests let you tell others about changes you've pushed to a branch in a repository on GitHub. Once a pull request is opened, you can discuss and review the potential changes with collaborators and add follow-up commits before your changes are merged into the base branch.
+
+Go to the following web address:
+
+```git
+    https://github.com/devendrk/Rosciper
+```
+
+Go to the `Branch:master` drop down menu and choose your branch. Enter your branch name at the `Switch branches\tags` drop down box or just click on your branch name. Now the drop down menu will say `Branch:<your branch name without including the < > tags>`. Click on the `New Pull Request` box and follow the instructions there. 
+    
 
 ### Happy coding :)
 
