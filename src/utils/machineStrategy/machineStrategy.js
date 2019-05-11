@@ -1,22 +1,22 @@
-//Function computer chooses rock
+// Function computer chooses rock
 function getRock() {
     var choices = ["r", "s", "p"];
     return choices[0];
 }
 
-//Function computer chooses scissors
+// Function computer chooses scissors
 function getScissors() {
     var choices = ["r", "s", "p"];
     return choices[1];
 }
 
-//Function computer chooses paper
+// Function computer chooses paper
 function getPaper() {
     var choices = ["r", "s", "p"];
     return choices[2];
 }
 
-//Function to randomize computer choice
+// Function to randomize computer choice
 function getMachineRandomChoice() {
     var choices = ["r", "s", "p"];
     var rng = Math.floor(Math.random()*3);
@@ -45,7 +45,7 @@ function trackAndCounterOpponentPreviousChoice(choice1){
     }
 }
 
-// Function to track and and decay the value of older choices
+//  Function with a decaying score. It is more influenced by recent outcomes than past ones and adapts to a slowly changing opponent. It also reduces the score of the move that would have lost. So, for example, if the opponent played rock, the score for paper would increase, but the score for scissors would decrease.
 function decayPreviousChoiceValues(choice1){
     if (!choiceRatings){
         let rockRating = 0;
@@ -68,7 +68,7 @@ function decayPreviousChoiceValues(choice1){
             scissorsRating += 0.1;
             rockRating -= 0.1;
         }
-
+        console.log("The choice ratings are: " + choiceRatings);
         let randNum = ((random.random())*(math.exp(rockRating))+(math.exp(scissorsRating))+(math.exp(paperRating))); // TODO translate from Python!
 
         if (randNum < (math.exp(rockRating))){
