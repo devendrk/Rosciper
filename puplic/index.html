@@ -6,16 +6,69 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Comppatible" content="ie=edge">
     <title>Tensor </title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <script src="script.js"></script>
 </head>
+<style>
+    h1 {
+        text-align: center;
+        text-shadow: 2px 2px 2px #CCCCCC;
+        font-family: "Pacifico";
+        font-style: italic;
+        color: red;
+
+
+    }
+
+    .game-elements {
+        height: 90px;
+        border: 1px solid #021a40;
+        padding: 1px;
+        border-radius: 15px;
+        margin: 10px;
+    }
+
+
+    .flex-container {
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-start;
+    }
+
+    #clock {
+        width: 100px;
+        height: 100px;
+        border-radius: 50%;
+        background-color: lightgrey;
+        margin-left: 20px;
+    }
+
+    span {
+        display: block;
+        width: 100%;
+        margin: auto;
+        padding-top: 10px;
+        text-align: center;
+        font-size: 50px;
+
+
+    }
+</style>
 
 <body>
-    <div class="container">
-        <h1>let learn tensorflow</h1>
-        <div id="output">
-
-        </div>
+    <div class="container"></div>
+    <h1>ROCK PAPER SCISSORS</h1>
+    <div id="clock">
+        <span id="seconds">3</span>
     </div>
-    <script sr c="./index.js"></script>
+    <div class="flex-container">
+        <div><img class="game-elements" src="rock.jpg" alt="Rock"></div>
+        <div><img class="game-elements" src="scissors.jpg" alt="Scissors"></div>
+        <div><img class="game-elements" src="paper.jpg" alt="Paper"></div>
+    </div>
+    </div>
+    <script src="./index.js"></script>
 </body>
 
 </html>

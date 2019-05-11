@@ -3,7 +3,7 @@ setState = 3;
 
 function countdown() {
 	setState--;
-	document.getElementById("seconds").setState = timeleft;
+	var timeleft = document.getElementById("seconds").setState
 	if (timeleft > 0) {
 		setTimeout(countdown, 1000);
 	}
