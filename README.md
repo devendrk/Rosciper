@@ -87,7 +87,7 @@ Move into the rosciper folder by typing:
     cd rosciper
 ```
 
-You're cursor will look like this:
+Your cursor will look like this:
 
 ```git
     C:\Users\s1900123\rosciper>
@@ -182,12 +182,20 @@ To see what files and folders are available to work on type:
     dir
 ```
 
-Type the name of the file you want to work on. If the file you need doesn't exist yet, type a name for the file, hit enter, and that file will be created. To update the existing README.md file type:
+To work on an existing file, type the name of the file you want to work on. So to update the existing README.md file type:
 
 ```git
     README.md
 ```
 That file automatically launches in my default IDE (Visual Studio Code).
+
+To create a new file type:
+
+```git
+    type nul > <your file name *with* the extension- don't include the < > tags!>
+```
+
+Your new file will br created and launch in Visual Studio.
 
 Start doing stuff!
 
