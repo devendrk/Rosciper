@@ -87,7 +87,7 @@ Move into the rosciper folder by typing:
     cd rosciper
 ```
 
-You're cursor will look like this:
+Your cursor will look like this:
 
 ```git
     C:\Users\s1900123\rosciper>
