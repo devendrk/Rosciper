@@ -240,7 +240,9 @@ To check your status again type:
 
 You will see a message stating everything on the branch is up to date. 
 
-To avoid merge conflicts make sure you are working with the most up to date version of the remote master branch. Type: 
+**IMPORTANT !!!**
+
+It is good practice to keep your local repo master up to date with the remote repo master. To avoid merge conflicts, make sure you are working with the most up to date version of the remote master branch. Type: 
 
 ```git
     git checkout master
@@ -274,9 +276,10 @@ The next time you want to push the branch, type:
 
 You will now see your changes on the remote repository and you can make a pull request!
 
-**IMPORTANT !!!**
 
-It is good practice to keep your local repo up to date with the remote repo. Before you `git push`, you can first `git pull` from the remote repository to your local master branch. We'll provide more detail about this later!
+## How do I get help with my code or get it merged into the project?
+
+Pull requests let you tell others about changes you've pushed to a branch in a repository on GitHub. Once a pull request is opened, you can discuss and review the potential changes with collaborators and add follow-up commits before your changes are merged into the base branch.
 
 ### Happy coding :)
 
