@@ -187,7 +187,7 @@ To work on an existing file, type the name of the file you want to work on. So t
 ```git
     README.md
 ```
-That file automatically launches in my default IDE (Visual Studio Code).
+That file automatically launches in your default IDE (Visual Studio Code).
 
 To create a new file type:
 
@@ -195,7 +195,7 @@ To create a new file type:
     type nul > <your file name *with* the extension- don't include the < > tags!>
 ```
 
-Your new file will br created and launch in Visual Studio.
+Your new file will be created and launch in Visual Studio.
 
 Start doing stuff!
 
