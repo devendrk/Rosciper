@@ -6,101 +6,57 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Comppatible" content="ie=edge">
     <title>Tensor </title>
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
-        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="styles.css">
 </head>
-<style>
-    h1 {
-        text-align: center;
-        text-shadow: 2px 2px 2px #CCCCCC;
-        font-family: "Pacifico";
-        font-style: italic;
-        color: red;
 
-
-    }
-
-    #winner-board {
-        height: 90px;
-        width: 160px;
-        border: 1px solid #021a40;
-        padding: 1px;
-        border-radius: 15px;
-        margin-left: 10px;
-        margin-bottom: 20px;
-        align-content: center;
-        box-shadow: 2px 2px;
-    }
-    h2{
-        margin-left: 10px;
-        font-size: 150%;
-        border-radius: 25px;
-        background:darkblue;
-        padding: 1px; 
-        width: 160px;
-        height: 35px;
-        color: white;
-        box-shadow: 2px 2px;
-     
-}
-.btn{
-    margin-left:300px;
-}
-
-    
-
-    .game-elements {
-        height: 90px;
-        border: 1px solid #021a40;
-        padding: 1px;
-        border-radius: 15px;
-        margin: 10px;
-    }
-
-
-    .flex-container {
-        display: flex;
-        flex-direction: row;
-        justify-content: flex-start;
-    }
-
-   /* #clock {
-        width: 100px;
-        height: 100px;
-        border-radius: 50%;
-        background-color: lightgrey;
-        margin-left: 20px;
-    }*/
-
-    span {
-        display: block;
-        width: 100%;
-        margin: auto;
-        padding-top: 10px;
-        text-align: center;
-        font-size: 50px;
-
-
-    }
 </style>
 
 <body>
-    <div class="container"></div>
-    <h1>ROCK PAPER SCISSORS</h1>
-   <br>
+    <div class="container-fluid">
+        <h1>ROCK PAPER SCISSORS</h1>
+        <br>
+
+        <div class="score-container">
+            <div>
+                <h2>Player 1</h2>
+                
+            </div>
+            <div class="dropdown">
+                <button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown">
+                  Gameplay modes
+                </button>
+                <div class="dropdown-menu">
+                  <a class="dropdown-item" href="#">Vs Player 2</a>
+                  <a class="dropdown-item" href="#">Vs Computer</a>
+                  
+                </div>
+              </div>
+           
+            <div><h2 id="computer">Computer</h2></div>
+            
+        </div>
+        
+    
+    
+    <div class="board-container">
+        <div class="winner-board" id="player-score"></div>
+        <div class="winner-board" id="computer-score"></div>
+
     </div>
-    <div><h2>Player 1 Score</h2></div>
-   
-    <div id="winner-board"></div>
+
+
     <div class="flex-container">
-        <div><img class="game-elements" src="./images/rock.png" alt="Rock"></div>
+        <div><img class="game-elements" id="rock" src="./images/rock.png" alt="Rock"></div>
         <div><img class="game-elements" src="./images/scissors.png" alt="Scissors"></div>
         <div><img class="game-elements" src="./images/paper.png" alt="Paper"></div>
         <div> <button type="button" class="btn btn-outline-success"><b>Play</b></button></div>
     </div>
     </div>
-
+    </div>
 </body>
 <script src="script.js"></script>
 
