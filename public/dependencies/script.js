@@ -10,6 +10,36 @@ var machineInput = getMachineInput();
 var player1choice = ["r", "s", "p"];
 var player2choice = ["r", "s", "p"];
 
+
+function playRock(num){
+    if (num === 1){
+        playerOneChoice = player1choice[0];
+    }
+    if (num === 2){
+        playerTwoChoice = player2choice[0];
+    }
+}
+
+function playScissors(num){
+    if (num === 1){
+        playerOneChoice = player1choice[1];
+    }
+    if (num === 2){
+        playerTwoChoice = player2choice[1];
+    }
+}
+
+function playPaper(num){
+    if (num === 1){
+        playerOneChoice = player1choice[2];
+    }
+    if (num === 2){
+        playerTwoChoice= player2choice[2];
+    }
+}
+
+
+
 //Compare player1, player2 or machine answers together
 function compare(choice1, choice2) {
 switch(choice1 + choice2) {
@@ -33,4 +63,4 @@ switch(choice1 + choice2) {
 }
 
 //init comparison
-compare(player1choice[0], machineInput)
+compare(player1choice, machineInput)
