@@ -63,6 +63,12 @@ span {
     margin: 50px;
 }
 
+.computer_stupidity_level {
+    text-align: center;
+    font-size: 2em;
+    margin: 50px;
+}
+
 .choices {
     text-align: center;
     margin: 50px;

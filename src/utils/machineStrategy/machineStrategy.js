@@ -1,3 +1,20 @@
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 // Function computer chooses rock
 function getRock() {
     var choices = ["r", "s", "p"];
