@@ -46,6 +46,23 @@ span {
     position: relative;
 }
 
+.start {
+    text-align: center;
+    margin: 50px;
+}
+
+#countdown {
+    text-align: center;
+    margin: 50px;
+    font-size: 5em;
+}
+
+.countdown {
+    text-align: center;
+    font-size: 5em;
+    margin: 50px;
+}
+
 .choices {
     text-align: center;
     margin: 50px;

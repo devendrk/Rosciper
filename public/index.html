@@ -4,18 +4,63 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Comppatible" content="ie=edge">
-    <title>Tensor </title>
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>ROSCIPER</title>
+    <link rel="stylesheet" href="dependencies/style.css">
+    <script src="dependencies/script.js"></script>
+    <script>
+        function timer(){
+            var timeleft = 10;
+            var downloadTimer = setInterval(function(){
+                document.getElementById("countdown").innerHTML = timeleft - 7;
+                timeleft -= 1;
+                if(timeleft <= 6){
+                    document.getElementById("countdown").innerHTML = "Go!"
+                    }
+                if(timeleft <= 0){
+                    clearInterval(downloadTimer);
+                    document.getElementById("countdown").innerHTML = "Ready?"  // resets the element to ready
+                    }
+            }, 1000);
+        }
+    </script>
+    <link href="https://fonts.googleapis.com/css?family=Asap" rel="stylesheet">
 </head>
 
 <body>
-    <div class="container">
-        <h1>let learn tensorflow</h1>
-        <div id="output">
 
+    <header>
+        <h1>ROCK/SCISSORS/PAPER</h1>
+    </header>
+
+    <div class="scoreboard">
+        <div id="p1lbl" class="badge">P1</div>
+        <div id="p2lbl" class="badge">P2</div>
+        <span id="p1score">0</span>
+        <span id="p2score">0</span>
+    </div>
+
+    <div class="result"></div>
+    <p>PAPER>ROCK=P1VICTORY!</p>
+    </div>
+
+    <div class="start">
+        <input type="image" src="dependencies/images/start_button.jpg" onclick="timer()"></input>
+    </div>
+
+    <div class="countdown" id="countdown">Ready?</div>
+
+    <div class="choices">
+        <div id="r" class="choice">
+            <input type="image" img src="dependencies/images/rock.png" alt="" name="playRock" class="playRock" id="playRock" onclick="playRock(1)"/>
+        </div>
+        <div id="s" class="choice">
+            <input type="image" img src="dependencies/images/scissors.png" alt="" name="playScissors" class="playScissors" id="playScissors" onclick="playScissors(1)"/>
+        </div>
+        <div id="p" class="choice">
+            <input type="image" img src="dependencies/images/paper.png" alt="" name="playPaper" class="playPaper" id="playPaper" onclick="playPaper(1)"/>
         </div>
     </div>
-    <script sr c="./index.js"></script>
 </body>
 
 </html>
